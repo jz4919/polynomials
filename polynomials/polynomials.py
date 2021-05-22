@@ -30,6 +30,9 @@ class Polynomial:
 
         return " + ".join(reversed(terms)) or "0"
 
+    def __repr__(self):
+        return f"{type(self).__name__}({self.coefficients})"
+
     def __eq__(self, other):
         """Define equality."""
         return self.coefficients == other.coefficients
